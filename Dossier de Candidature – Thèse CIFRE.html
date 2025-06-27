@@ -1,0 +1,313 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Opportunité de Thèse CIFRE | Babaoo & Anthony Godin</title>
+   <script src="https://cdn.tailwindcss.com"></script>
+   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+  
+   <style>
+       body {
+           font-family: 'Inter', sans-serif;
+           background-color: #F8F9FA;
+           color: #0B132B;
+       }
+       .chart-container {
+           position: relative;
+           width: 100%;
+           max-width: 600px;
+           margin-left: auto;
+           margin-right: auto;
+           height: 300px;
+           max-height: 350px;
+       }
+       @media (min-width: 768px) {
+           .chart-container {
+               height: 350px;
+               max-height: 400px;
+           }
+       }
+       .kpi-card {
+           background-color: white;
+           border-radius: 1rem;
+           padding: 1.5rem;
+           text-align: center;
+           box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+           transition: all 0.3s ease-in-out;
+       }
+       .kpi-card:hover {
+           transform: translateY(-5px);
+           box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+       }
+       .kpi-number {
+           font-size: 3rem;
+           font-weight: 900;
+           color: #3A506B;
+       }
+       .kpi-label {
+           font-size: 1rem;
+           color: #5BC0BE;
+           font-weight: 600;
+       }
+       .modal-overlay {
+           position: fixed;
+           top: 0;
+           left: 0;
+           right: 0;
+           bottom: 0;
+           background-color: rgba(11, 19, 43, 0.7);
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           z-index: 50;
+           backdrop-filter: blur(4px);
+       }
+       .modal-content {
+           background-color: white;
+           padding: 2rem;
+           border-radius: 1rem;
+           max-width: 90vw;
+           width: 600px;
+           max-height: 80vh;
+           overflow-y: auto;
+           position: relative;
+       }
+       .modal-close {
+           position: absolute;
+           top: 1rem;
+           right: 1rem;
+           cursor: pointer;
+           width: 2rem;
+           height: 2rem;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           border-radius: 9999px;
+           background-color: #f0f0f0;
+           transition: background-color 0.2s;
+       }
+       .modal-close:hover {
+           background-color: #e0e0e0;
+       }
+       .clickable-section {
+           cursor: pointer;
+           transition: background-color 0.2s;
+       }
+       .clickable-section:hover {
+           background-color: #f7fafc;
+       }
+   </style>
+</head>
+<body class="antialiased">
+
+
+   <main class="container mx-auto p-4 md:p-8 max-w-7xl">
+
+
+       <header class="text-left my-12">
+           <h1 class="text-4xl md:text-5xl font-bold text-[#0B132B] tracking-tight">Projet de thèse CIFRE : un levier de croissance stratégique pour <span class="text-[#5BC0BE]">Babaoo</span></h1>
+           <p class="mt-4 text-lg text-gray-600 max-w-3xl">Une proposition pour transformer votre expertise applicative en une validation scientifique reconnue, grâce à un partenariat R&D à forte valeur ajoutée.</p>
+       </header>
+
+
+       <section id="opportunity" class="my-16">
+           <h2 class="text-3xl font-bold text-left mb-10">De l'application à la preuve scientifique</h2>
+           <p class="text-left text-gray-600 mb-12 max-w-4xl">Ce projet offre des bénéfices stratégiques directs pour asseoir votre valeur scientifique.</p>
+           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+               <div class="kpi-card"><div class="text-5xl mb-3">🔬</div><h3 class="text-xl font-bold text-[#3A506B]">Validation scientifique</h3><p class="text-gray-500 mt-2">Obtenez des données probantes sur l'efficacité de votre approche, un argument commercial décisif.</p></div>
+               <div class="kpi-card"><div class="text-5xl mb-3">📈</div><h3 class="text-xl font-bold text-[#3A506B]">Crédibilité accrue</h3><p class="text-gray-500 mt-2">Positionnez Babaoo comme un leader sérieux et innovant de la Neuroéducation.</p></div>
+               <div class="kpi-card"><div class="text-5xl mb-3">💡</div><h3 class="text-xl font-bold text-[#3A506B]">Optimisation produit</h3><p class="text-gray-500 mt-2">Utilisez les résultats de la recherche pour itérer, améliorer et innover sur vos applications.</p></div>
+               <div class="kpi-card"><div class="text-5xl mb-3">✍️</div><h3 class="text-xl font-bold text-[#3A506B]">Création de contenu</h3><p class="text-gray-500 mt-2">Générez des publications scientifiques et des livres blancs pour renforcer votre image de marque.</p></div>
+               <div class="kpi-card"><div class="text-5xl mb-3">🤝</div><h3 class="text-xl font-bold text-[#3A506B]">Nouvelles opportunités</h3><p class="text-gray-500 mt-2">Facilitez les partenariats avec les institutions scolaires et les professionnels de santé.</p></div>
+               <div class="kpi-card bg-[#3A506B] text-white"><div class="text-5xl mb-3 text-[#6FFFE9]">🎯</div><h3 class="text-xl font-bold text-white">Retour sur investissement</h3><p class="text-gray-300 mt-2">Un projet de R&D stratégique co-financé par des aides publiques majeures.</p></div>
+           </div>
+       </section>
+
+
+       <section id="financials" class="my-16 bg-white rounded-2xl p-6 md:p-10 shadow-lg">
+           <h2 class="text-3xl font-bold text-left mb-4">Un investissement à haut rendement</h2>
+           <p class="text-left text-gray-600 mb-12 max-w-4xl">Le dispositif CIFRE, couplé au Crédit d’Impôt Recherche (CIR), rend ce projet R&D extrêmement compétitif. Le coût net pour l'entreprise est considérablement réduit.</p>
+           <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+               <div>
+                   <h3 class="text-xl font-semibold text-left mb-2">Coût net annuel (3 premières années)</h3>
+                   <p class="text-left text-gray-500 mb-4 text-sm">Répartition du coût chargé annuel pour l'entreprise, après déduction des aides.</p>
+                   <div class="chart-container"><canvas id="costBreakdownChart"></canvas></div>
+               </div>
+               <div class="flex flex-col justify-center space-y-8">
+                   <div class="kpi-card"><div class="kpi-number text-[#5BC0BE]">~€8.5k</div><div class="kpi-label">Coût net annuel minimal</div><p class="text-xs text-gray-500 mt-1">Pour un coût chargé de 34k€</p></div>
+                   <div class="kpi-card"><div class="kpi-number text-[#5BC0BE]">~€14.2k</div><div class="kpi-label">Coût net annuel moyen</div><p class="text-xs text-gray-500 mt-1">Pour un coût chargé de 42k€</p></div>
+                   <div class="kpi-card border-2 border-dashed border-[#5BC0BE]"><div class="kpi-number text-[#3A506B]">~€1750</div><div class="kpi-label">Salaire net mensuel minimum du doctorant</div><p class="text-xs text-gray-500 mt-1">Basé sur le minimum légal de 26.4k€ brut/an</p></div>
+               </div>
+           </div>
+       </section>
+
+
+       <section id="candidate" class="my-16">
+           <h2 class="text-3xl font-bold text-left mb-4">Le profil idéal pour une mission d'excellence</h2>
+           <p class="text-left text-gray-600 mb-12 max-w-4xl">Anthony Godin possède une double expertise rare : une connaissance approfondie du terrain éducatif et une solide formation en sciences cognitives.</p>
+           <div class="bg-white rounded-2xl p-6 md:p-8 shadow-lg">
+               <h3 class="text-xl font-semibold text-left mb-6">Un profil au carrefour de la pratique et de la recherche</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                   <div class="border-l-4 border-[#5BC0BE] pl-4">
+                       <h4 class="font-bold text-lg text-[#3A506B]">Parcours de terrain solide</h4>
+                       <p class="text-gray-600 text-sm mt-1">10+ ans d'expérience comme enseignant spécialisé (CAPA-SH) et coordonnateur ULIS auprès d'enfants avec TND.</p>
+                   </div>
+                   <div class="border-l-4 border-[#5BC0BE] pl-4">
+                       <h4 class="font-bold text-lg text-[#3A506B]">Expertise en neuroéducation</h4>
+                       <p class="text-gray-600 text-sm mt-1">Formateur indépendant pour les professionnels de l'éducation et créateur de contenus fondés sur les données probantes.</p>
+                   </div>
+                   <div class="border-l-4 border-[#5BC0BE] pl-4">
+                       <h4 class="font-bold text-lg text-[#3A506B]">Formation orientée recherche</h4>
+                       <p class="text-gray-600 text-sm mt-1">Titulaire du CU EREFA et engagé dans le DU Neuroéducation (Université Paris Cité), garantissant la rigueur scientifique.</p>
+                   </div>
+               </div>
+           </div>
+       </section>
+
+
+       <section id="collaboration" class="my-16">
+            <h2 class="text-3xl font-bold text-left mb-10">Un partenariat simple et structuré</h2>
+            <p class="text-left text-gray-600 mb-12 max-w-4xl">Le dispositif CIFRE organise une collaboration tripartite claire, où chaque acteur a un rôle défini, garantissant le succès du projet.</p>
+           
+            <div class="relative flex items-center justify-center py-8">
+               <div class="absolute w-full h-1 bg-gray-200"></div>
+               <div class="relative flex justify-between w-full max-w-4xl">
+                   <div class="z-10 text-center w-1/3">
+                       <div class="bg-[#3A506B] text-white rounded-full w-24 h-24 flex items-center justify-center mx-auto shadow-lg"><span class="text-4xl">🏢</span></div>
+                       <h3 class="mt-4 font-bold">Babaoo</h3>
+                   </div>
+                   <div class="z-10 text-center w-1/3">
+                       <div class="bg-[#5BC0BE] text-white rounded-full w-24 h-24 flex items-center justify-center mx-auto shadow-lg"><span class="text-4xl">👤</span></div>
+                       <h3 class="mt-4 font-bold">Doctorant</h3>
+                   </div>
+                   <div class="z-10 text-center w-1/3">
+                       <div class="bg-[#3A506B] text-white rounded-full w-24 h-24 flex items-center justify-center mx-auto shadow-lg"><span class="text-4xl">🏛️</span></div>
+                       <h3 class="mt-4 font-bold">Laboratoire</h3>
+                   </div>
+               </div>
+            </div>
+
+
+            <div id="tutor-section" class="mt-12 bg-white rounded-2xl p-6 md:p-8 shadow-lg max-w-3xl mx-auto clickable-section">
+               <h3 class="text-xl font-semibold text-left">Rôle du tuteur en entreprise</h3>
+               <p class="text-left text-gray-500 mb-2">Un rôle d'accompagnement clé, garantissant l'adéquation entre la recherche et les besoins de Babaoo.</p>
+               <span class="text-[#5BC0BE] font-semibold hover:underline">Cliquez ici pour voir le détail des missions →</span>
+            </div>
+       </section>
+
+
+       <footer class="text-left my-12 border-t pt-8 border-gray-200">
+            <h2 class="text-3xl font-bold text-[#0B132B]">Prêts à innover ensemble ?</h2>
+            <p class="mt-4 text-lg text-gray-600">Discutons de la manière dont ce projet peut accélérer votre développement.</p>
+            <div class="mt-6 flex flex-col md:flex-row gap-4">
+                <a href="mailto:anthony.alex.godin@gmail.com" class="inline-block bg-[#5BC0BE] text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-[#3A506B] transition text-center">
+                   Me contacter par email
+                </a>
+                <a href="tel:+33666122984" class="inline-block bg-gray-200 text-[#3A506B] font-bold py-3 px-6 rounded-lg hover:bg-gray-300 transition text-center">
+                   Appeler le 06 66 12 29 84
+                </a>
+            </div>
+            <button id="cessation-button" class="mt-6 text-sm text-gray-500 hover:text-[#0B132B] hover:underline">Que se passe-t-il en cas de cessation d'activité de l'entreprise ?</button>
+       </footer>
+   </main>
+
+
+   <div id="tutor-modal" class="modal-overlay hidden">
+       <div class="modal-content">
+           <div id="close-tutor-modal" class="modal-close">
+               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+           </div>
+           <h3 class="text-2xl font-bold text-[#3A506B] mb-4">Détail des missions du tuteur CIFRE</h3>
+           <p class="mb-6 text-gray-600">Le tuteur est le garant, côté entreprise, du bon déroulement de la thèse et de la pertinence des travaux pour l'entreprise. Ses missions sont :</p>
+           <ul class="space-y-3 text-gray-700 list-inside">
+               <li class="flex items-start"><span class="text-[#5BC0BE] mr-3 mt-1">✔</span><span><strong>Accueillir et intégrer</strong> le doctorant dans l’entreprise et ses équipes.</span></li>
+               <li class="flex items-start"><span class="text-[#5BC0BE] mr-3 mt-1">✔</span><span><strong>Définir le programme de travail</strong> en lien avec les besoins de l’entreprise et les exigences académiques.</span></li>
+               <li class="flex items-start"><span class="text-[#5BC0BE] mr-3 mt-1">✔</span><span><strong>Organiser des points réguliers</strong> pour faire le suivi scientifique, technique et organisationnel des travaux.</span></li>
+               <li class="flex items-start"><span class="text-[#5BC0BE] mr-3 mt-1">✔</span><span><strong>Assurer la mise à disposition des moyens</strong> matériels et humains nécessaires à la recherche.</span></li>
+               <li class="flex items-start"><span class="text-[#5BC0BE] mr-3 mt-1">✔</span><span><strong>Faciliter l'accès aux formations</strong> et la participation à des événements scientifiques.</span></li>
+               <li class="flex items-start"><span class="text-[#5BC0BE] mr-3 mt-1">✔</span><span><strong>Articuler les attentes</strong> de l’entreprise et du laboratoire (confidentialité, publications, PI).</span></li>
+               <li class="flex items-start"><span class="text-[#5BC0BE] mr-3 mt-1">✔</span><span><strong>Participer à l'évaluation</strong> et signaler à l'ANRT tout changement important.</span></li>
+           </ul>
+       </div>
+   </div>
+  
+   <div id="cessation-modal" class="modal-overlay hidden">
+       <div class="modal-content">
+           <div id="close-cessation-modal" class="modal-close">
+               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+           </div>
+           <h3 class="text-2xl font-bold text-[#3A506B] mb-4">Pérennité du projet en cas de cessation d'activité</h3>
+           <p class="mb-4 text-gray-600">Le dispositif CIFRE est robuste et prévoit des solutions pour protéger le projet doctoral même en cas de difficultés de l'entreprise.</p>
+           <div class="space-y-4">
+               <div>
+                   <h4 class="font-bold">Rupture du contrat & Financement</h4>
+                   <p class="text-gray-700 text-sm">La fermeture de l'entreprise met fin au contrat de travail et à la subvention CIFRE. Le doctorant conserve son inscription à l'université.</p>
+               </div>
+               <div>
+                   <h4 class="font-bold">Continuité de la thèse</h4>
+                   <p class="text-gray-700 text-sm">La thèse n'est pas automatiquement interrompue. Le doctorant, avec son laboratoire, peut chercher des solutions :</p>
+                   <ul class="list-disc list-inside space-y-1 mt-2 text-sm">
+                       <li><strong>Transfert de la CIFRE :</strong> Trouver une nouvelle entreprise d'accueil pour reprendre la convention.</li>
+                       <li><strong>Nouveau financement :</strong> Obtenir un autre type de contrat (contrat doctoral, bourse, etc.) pour terminer la thèse.</li>
+                   </ul>
+               </div>
+               <div class="bg-blue-50 border border-blue-200 text-blue-800 text-sm p-3 rounded-lg mt-4">
+                   <strong>En synthèse :</strong> Le parcours doctoral est sécurisé. La priorité est donnée à la continuité de la recherche via un transfert ou un nouveau financement, avec l'appui de l'école doctorale.
+               </div>
+           </div>
+       </div>
+   </div>
+
+
+   <script>
+       const brilliantBlues = { darkBlue: '#0B132B', darkTeal: '#3A506B', teal: '#5BC0BE', lightTeal: '#6FFFE9', white: '#FFFFFF', background: '#F8F9FA' };
+       const tooltipConfig = { plugins: { tooltip: { callbacks: { title: function(tooltipItems) { const item = tooltipItems[0]; let label = item.chart.data.labels[item.dataIndex]; if (Array.isArray(label)) { return label.join(' '); } else { return label; } } } } } };
+
+
+       const costBreakdownCtx = document.getElementById('costBreakdownChart').getContext('2d');
+       new Chart(costBreakdownCtx, {
+           type: 'bar',
+           data: {
+               labels: ['Hypothèse Basse (€34k)', 'Hypothèse Moyenne (€42k)'],
+               datasets: [
+                   { label: 'Coût Net Entreprise', data: [8500, 14200], backgroundColor: brilliantBlues.darkTeal, borderWidth: 1 },
+                   { label: 'Crédit Impôt Recherche', data: [11500, 13800], backgroundColor: brilliantBlues.teal, borderWidth: 1 },
+                   { label: 'Subvention ANRT', data: [14000, 14000], backgroundColor: brilliantBlues.lightTeal, borderWidth: 1 }
+               ]
+           },
+           options: { ...tooltipConfig, responsive: true, maintainAspectRatio: false, indexAxis: 'y', scales: { x: { stacked: true, title: { display: true, text: 'Montant Annuel (€)' } }, y: { stacked: true } }, plugins: { ...tooltipConfig.plugins, title: { display: false }, legend: { position: 'bottom' } } }
+       });
+
+
+       const tutorSection = document.getElementById('tutor-section');
+       const tutorModal = document.getElementById('tutor-modal');
+       const closeTutorModal = document.getElementById('close-tutor-modal');
+
+
+       tutorSection.addEventListener('click', () => tutorModal.classList.remove('hidden'));
+       closeTutorModal.addEventListener('click', () => tutorModal.classList.add('hidden'));
+
+
+       const cessationButton = document.getElementById('cessation-button');
+       const cessationModal = document.getElementById('cessation-modal');
+       const closeCessationModal = document.getElementById('close-cessation-modal');
+
+
+       cessationButton.addEventListener('click', () => cessationModal.classList.remove('hidden'));
+       closeCessationModal.addEventListener('click', () => cessationModal.classList.add('hidden'));
+      
+       window.addEventListener('click', (event) => {
+           if (event.target === tutorModal) {
+               tutorModal.classList.add('hidden');
+           }
+           if (event.target === cessationModal) {
+               cessationModal.classList.add('hidden');
+           }
+       });
+   </script>
+</body>
+</html>
